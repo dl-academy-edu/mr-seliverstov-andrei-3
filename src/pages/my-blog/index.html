@@ -10,23 +10,17 @@
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/fonts/oswald.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Главная</title>
+    <title>My blog</title>
   </head>
   <body>
     @@include('header/index.html') 
     <main>
-      @@include('avatar/index.html')
-      @@include('about-me/index.html')
-      @@include('skills/index.html')
-      @@include('portfolio/index.html')
+        @@include('filter/index.html')
+        @@include('search-bar/index.html')
+        @@include('blog/index.html')
     </main>
     @@include('footer/index.html')
-    @@include('button-scroll/index.html')
-    @@include('modal/sign-in-modal.html')
-    @@include('modal/register-modal.html')
-    @@include('modal/send-message-modal.html')
     @@include('mobile-menu/index.html')
-    <a href="/pages/Lessons/index.html">Lessons</a>
     <script src="scripts.js"></script>
   </body>
 </html>

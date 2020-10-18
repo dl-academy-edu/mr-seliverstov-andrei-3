@@ -1,0 +1,73 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.skills {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    margin: 20px 0 50px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        text-align: center;
+
+        &-programm {
+            font-family: "Gilroy", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            text-align: center;
+            color: $c_grey--text;
+            margin: 20px 0 28px;
+        }
+
+        &-progress {
+            display: flex;
+            align-items: center;
+            margin: 0 12px;
+            
+            &-number {
+                font-family: "Gilroy", Arial, sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 17px;
+                text-align: left;
+                color: $c_grey--text;
+                margin-right: 12px;
+            }
+
+            &-bar {
+                max-width: 142px;
+                height: 9px;
+                background-color: transparent;
+
+                &::-webkit-progress-bar {
+                    border: none;            
+                    max-width: 142px;
+                    height: 9px;            
+                    background-color: $c_grey--mercury;
+                }
+
+                &::-webkit-progress-value {
+                    border: none;            
+                    width: 142px;
+                    height: 9px;            
+                    background-color: $c_black;
+                }
+            }     
+        }
+    }    
+}

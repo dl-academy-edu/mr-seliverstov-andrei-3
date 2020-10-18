@@ -1,0 +1,72 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+    &__text {
+        text-align: center;
+        margin: 20px 0 30px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    &__button {
+        padding: 10px 29px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        background-color: $c_black--panter;
+        color: $c_white;
+        border-radius: 30px;
+    }
+
+    &__list {
+        display: flex;
+        max-width: 350px;
+        flex-wrap: wrap;        
+        justify-content: space-evenly;
+        margin: 40px 0;
+    }
+
+    &__item {
+        border-radius: 30px;
+        border: 2 solid $c_black--panter;        
+        padding: 10px 19px;
+        margin: 5px;
+    }
+
+    &__contacts {
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;        
+        color: $c_black--panter;
+    }
+
+    &__bottom-text {
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        color: $c_grey--text;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__bottom-link {
+        color: $c_grey--text;
+        border-bottom: 1px dashed $c_grey--text;        
+    }
+}

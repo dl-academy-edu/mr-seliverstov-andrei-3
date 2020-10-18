@@ -1,0 +1,66 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.portfolio {
+    background-color: $c_grey--wild-sand;
+    padding: 0.5px 220px;
+    margin-top: 64px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__slider {
+        margin: 50px 0 60px;
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%; 
+        width: 25px;
+        height: 43px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+
+        &-backward {
+            left: 30px;
+        }
+
+        &-forward {
+            right: 30px;
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 1px;
+        background-color: rgba($c_black--deep, 0.85);
+        padding: 31px 0;
+        width: 100%;
+        align-items: center;
+        display: flex;
+		flex-direction: column;
+
+        &-link {
+            font-family: "Gilroy", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            color: $c_white;
+            margin-bottom: 16px;
+            border-bottom: 1px dashed $c_white;
+        }
+
+        &-text {
+            font-family: "Gilroy", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            color: $c_white;
+            max-width: 400px;
+        }
+    }
+}
