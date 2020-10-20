@@ -1,0 +1,47 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.header {      
+
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 33px;
+        padding-bottom: 33px;
+        border-bottom: 1px solid $c_grey--text;
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            margin-left: 20px;
+        }
+
+        &-link {
+            font-family: "Gilroy", Arial, sans-serif;
+            font-weight: 400;
+            color: $c_grey--text;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &-button {
+            font-family: "Gilroy", Arial, sans-serif;
+            font-weight: 400;
+            color: $c_grey--text;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }    
+
+    &__home-button {
+        font-family: "Gilroy", Arial, sans-serif;
+        font-weight: 700;
+        color: $c_black;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+

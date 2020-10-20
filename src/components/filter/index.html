@@ -1,0 +1,139 @@
+<section class="filter container">
+    <h1 class="h1-header">My blog</h1>
+    <div class="filter__block">
+        <form action="/" class="filter__block-form">
+            <fieldset class="filter__block-tags">
+                <legend class="filter__block-name">Tags</legend>
+                <ul class="filter__block-tags-list">
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="blue">
+                        </label> 
+                    </li> 
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="cian">
+                        </label>
+                    </li>
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="yellow">
+                        </label>
+                    </li>
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="light-blue">
+                        </label>
+                    </li>
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="orange">
+                        </label>
+                    </li>
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="pink">
+                        </label>
+                    </li>
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="purple">
+                        </label>
+                    </li>
+                    <li class="filter__block-tags-item">
+                        <label class="filter__block-label">               
+                            <input class="filter__block-checkbox" name="tags" type="checkbox" value="green">
+                        </label>
+                    </li>
+                </ul>   
+            </fieldset>
+            <fieldset class="filter__block-views">
+                <legend class="filter__block-name">Views</legend>
+                <ul class="filter__block-views-list">
+                    <li class="filter__block-views-item">
+                        <label class="filter__block-views-label">
+                            <input class="filter__block-views-input hidden" name="views" type="radio" value="100-500">
+                            <span class="filter__block-views-text">100-500</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-views-item">
+                        <label class="filter__block-views-label">
+                            <input class="filter__block-views-input hidden" name="views" type="radio" value="500-1000">
+                            <span class="filter__block-views-text">500-1000</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-views-item">
+                        <label class="filter__block-views-label">
+                            <input class="filter__block-views-input hidden" name="views" type="radio" value="1000-2000">
+                            <span class="filter__block-views-text">1000-2000</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="filter__block-comments">
+                <legend class="filter__block-name">Comments</legend>               
+                <ul class="filter__block-comments-list">
+                    <li class="filter__block-comments-item">
+                        <label class="filter__block-comments-label">
+                            <input class="filter__block-comments-input" name="comments" type="checkbox" value="0">
+                            <span class="filter__block-comments-text">0</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-comments-item">
+                        <label class="filter__block-comments-label">
+                            <input class="filter__block-comments-input" name="comments" type="checkbox" value="0-1">
+                            <span class="filter__block-comments-text">0-1</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-comments-item">
+                        <label class="filter__block-comments-label">
+                            <input class="filter__block-comments-input" name="comments" type="checkbox" value="1-50">
+                            <span class="filter__block-comments-text">1-50</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="filter__block-shows">
+                <legend class="filter__block-name">How show?</legend>
+                <ul class="filter__block-shows-list">
+                    <li class="filter__block-shows-item">
+                        <label class="filter__block-shows-label">
+                            <input class="filter__block-shows-input hidden" name="shows" type="radio" value="show 5">
+                            <span class="filter__block-shows-text">show 5</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-shows-item">
+                        <label class="filter__block-shows-label">
+                            <input class="filter__block-shows-input hidden" name="shows" type="radio" value="show 10">
+                            <span class="filter__block-shows-text">show 10</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="filter__block-sort">
+                <legend class="filter__block-name">Sort by</legend>
+                <ul class="filter__block-sort-list">
+                    <li class="filter__block-sort-item">
+                        <label class="filter__block-sort-label">
+                            <input class="filter__block-sort-input hidden" name="sort" type="radio" value="date">
+                            <span class="filter__block-sort-text">date</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-sort-item">
+                        <label class="filter__block-sort-label">
+                            <input class="filter__block-sort-input hidden" name="sort" type="radio" value="title">
+                            <span class="filter__block-sort-text">title</span>
+                        </label>
+                    </li>
+                    <li class="filter__block-sort-item">
+                        <label class="filter__block-sort-label">
+                            <input class="filter__block-sort-input hidden" name="sort" type="radio" value="views">
+                            <span class="filter__block-sort-text">views</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>        
+        <button class="filter__button">Reset</button>
+    </div>
+</section>

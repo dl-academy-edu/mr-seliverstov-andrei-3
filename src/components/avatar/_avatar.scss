@@ -1,0 +1,46 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.avatar {
+
+    &__information {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__data {
+        margin-left: 40px;
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 10px;
+    }
+
+    &__picture {
+        margin-top: 36px;
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0 60px;
+    }
+
+    &__pagination {
+        display: flex;
+        list-style-type: none;
+
+        &-button {
+            background-color: transparent;
+            border: none;
+            padding: 14px 4px;
+        }
+    }
+
+    &__vector {
+        background-color: transparent;
+        border: none;
+    }
+
+}
+
