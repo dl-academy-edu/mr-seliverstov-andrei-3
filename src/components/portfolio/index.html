@@ -1,21 +1,39 @@
 <section class="portfolio">
     <h2 class="h2-header">Portfolio</h2>
     <div class="portfolio__slider">
-        <picture>
-            <source srcset="/static/images/port.jpg, /static/images/port-2.jpg 2x" media="(min-width: 1024px)">
-            <source srcset="/static/images/port-tablet.jpg" media="(min-width: 768px) and (max-width 1023px)">
-            <source srcset="/static/images/port-picture-mobile.jpg" media="(max-width: 767px)">
-            <img class="portfolio__picture" srcset="/static/images/port.jpg" alt="portfolio-picture">
-        </picture>
-        <button class="portfolio__button portfolio__button-backward">
-            <img src="/static/images/Arrow-left.svg" alt="backward button">
-        </button>
-        <button class="portfolio__button portfolio__button-forward">
-            <img src="/static/images/Arrow-right.svg" alt="forward button">
-        </button>
-        <div class="portfolio__bottom">
-            <a class="portfolio__bottom-link" href="#">Learning site for DL Academy courses</a>
-            <p class="portfolio__bottom-text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
-        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="/static/images/port.jpg, /static/images/port-2.jpg 2x" media="(min-width: 1024px)">
+                        <source srcset="/static/images/port-tablet.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                        <source srcset="/static/images/port-mobile.jpg" media="(max-width: 767px)">
+                        <img class="portfolio__picture" srcset="/static/images/port.jpg" alt="portfolio-picture">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="/static/images/Antonina.jpg, /static/images/Antonina-2.jpg 2x" media="(min-width: 1024px)">
+                        <source srcset="/static/images/Antonina-tablet.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                        <source srcset="/static/images/Antonina-mobile.jpg" media="(max-width: 767px)">
+                        <img class="avatar__picture" srcset="/static/images/Antonina.jpg" alt="avatar-picture">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="/static/images/port.jpg, /static/images/port-2.jpg 2x" media="(min-width: 1024px)">
+                        <source srcset="/static/images/port-tablet.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                        <source srcset="/static/images/port-mobile.jpg" media="(max-width: 767px)">
+                        <img class="portfolio__picture" srcset="/static/images/port.jpg" alt="portfolio-picture">
+                    </picture>
+                </div>
+            </div>        
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper__bottom">
+                <a class="swiper__bottom-link" href="#">Learning site for DL Academy courses</a>
+                <p class="swiper__bottom-text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+            </div>
+        </div>        
     </div>
 </section>
