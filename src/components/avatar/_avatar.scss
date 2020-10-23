@@ -14,33 +14,78 @@
         font-size: 18px;
         line-height: 22px;
         padding-bottom: 10px;
+    }     
+
+    &__vector {
+        background-color: transparent;
+        border: none;
+
+        &:disabled {
+            opacity: .2;
+        }
+
+        &:hover {
+            opacity: .5;
+
+        }
+        &:focus {
+            opacity: .5;
+        }
+    }
+}
+
+.slider {
+    margin: 36px 0 60px;
+
+    &__wrapper {
+        overflow: hidden;
+        max-height: 465px;            
     }
 
-    &__picture {
-        margin-top: 36px;
+    &__inner-wrapper {
+        height: 100%;
+        display: flex;
     }
 
-    &__slider {
+    &__slide{
+        display: flex;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    &__bottom-panel {
         display: flex;
         justify-content: space-between;
-        margin: 30px 0 60px;
+        margin-top: 30px;
     }
 
     &__pagination {
         display: flex;
         list-style-type: none;
+        align-items: center;
 
-        &-button {
-            background-color: transparent;
+        &-dots {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            margin: 0 3.5px;
+            border-radius: 50%;
             border: none;
-            padding: 14px 4px;
+            background-color: $c_grey--mercury;
+
+            &-active {
+                background-color: $c_black--panter;
+            }
+
+            &:hover {
+                background-color: $c_grey--text;
+            }
+            
+            &:focus {
+                background-color: $c_grey--text;
+            }
         }
     }
+} 
 
-    &__vector {
-        background-color: transparent;
-        border: none;
-    }
-
-}
 

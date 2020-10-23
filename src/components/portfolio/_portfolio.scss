@@ -13,25 +13,34 @@
 
     &__slider {
         margin: 50px 0 60px;
-        position: relative;
+    }    
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.swiper{
+    &-container {
+        max-width: 1000px;
+        min-height: 604px;  
+    } 
+
+    &-button-prev {
+        color: $c_black--panter;
+        font-weight: 900;
+        width: 25px;
+        height: 42px;
+        left: 30px;
     }
 
-    &__button {
-        position: absolute;
-        top: 50%; 
+    &-button-next {
+        color: $c_black--panter;
+        font-weight: 900;
         width: 25px;
-        height: 43px;
-        padding: 0;
-        background-color: transparent;
-        border: none;
-
-        &-backward {
-            left: 30px;
-        }
-
-        &-forward {
-            right: 30px;
-        }
+        height: 42px;
+        right: 30px;
     }
 
     &__bottom {
@@ -42,7 +51,8 @@
         width: 100%;
         align-items: center;
         display: flex;
-		flex-direction: column;
+        flex-direction: column;
+        z-index: 1;
 
         &-link {
             font-family: "Gilroy", Arial, sans-serif;
