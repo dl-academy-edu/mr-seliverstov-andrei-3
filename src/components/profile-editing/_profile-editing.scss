@@ -2,7 +2,7 @@
 @import "../vars";
 @import "../mixins";
 
-.modal {
+.editing {
     position: fixed;
     top: 0;
     right: 0;
@@ -22,22 +22,16 @@
         border: 2px solid $c_black;
         justify-content: space-between;
 
-        &-sign {            
+        &-password {            
             max-width: 370px;
             width: 100%;
-            min-height: 318px;
+            min-height: 407px;
         }
 
-        &-register {
+        &-data {
             max-width: 680px;
             width: 100%;
-            min-height: 533px;
-        }
-
-        &-message {
-            max-width: 680px;
-            width: 100%;
-            min-height: 540px;
+            min-height: 504px;
         }
     }
 
@@ -46,7 +40,7 @@
         margin: 0 -10px;
     }
 
-    &__label {  
+    &__label {
 
         :hover {
             border-color: $c_grey--text;
@@ -57,7 +51,7 @@
             border-color: $c_black--panter;
         }
 
-        &-register {
+        &-data {
             width: 100%;
             margin: 0 10px;
         }
@@ -80,7 +74,7 @@
         border: 2.5px solid $c_grey--mercury;
         height: 50px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 20px;        
     }
 
     &__textarea {
@@ -187,7 +181,7 @@
     }
 }
 
-.sign {
+.password {
     display: none;
 
     &_open {
@@ -195,15 +189,7 @@
     }
 }
 
-.register {
-    display: none;
-
-    &_open {
-        display: block;
-    }
-}
-
-.message {
+.data {
     display: none;
 
     &_open {

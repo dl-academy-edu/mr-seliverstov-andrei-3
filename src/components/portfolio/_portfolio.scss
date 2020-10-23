@@ -25,6 +25,7 @@
     &-container {
         max-width: 1000px;
         min-height: 604px;  
+        z-index: 0;
     } 
 
     &-button-prev {
@@ -62,6 +63,12 @@
             color: $c_white;
             margin-bottom: 16px;
             border-bottom: 1px dashed $c_white;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid $c_white;
+                cursor: pointer;
+            }
         }
 
         &-text {

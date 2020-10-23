@@ -1,3 +1,46 @@
 @import "../colors";
 @import "../vars";
 @import "../mixins";
+
+.profile {
+    &__block {
+        margin: 40px 0 93px;
+        display: flex;
+    }
+
+    &__data {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    &__text {
+        margin-right: 15px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    &__data-button {
+        margin-bottom: 20px;
+    }
+}
+
+.nofoto {
+    min-width: 320px;
+    min-height: 450px;
+    margin: -15px 105px 0 -15px;
+}

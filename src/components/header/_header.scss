@@ -25,6 +25,13 @@
             color: $c_grey--text;
             font-size: 18px;
             line-height: 22px;
+            transition: color $tr_duration $tr_easing;
+
+            &:hover,
+            &:focus {
+                color: $c_black--panter;
+                cursor: pointer;
+            }
         }
 
         &-button {
@@ -33,13 +40,22 @@
             color: $c_grey--text;
             font-size: 18px;
             line-height: 22px;
+            background-color: transparent;
+            border: none;
+            transition: color $tr_duration $tr_easing;
+
+            &:hover,
+            &:focus {
+                color: $c_black--panter;
+                cursor: pointer;
+            }
         }
     }    
 
     &__home-button {
         font-family: "Gilroy", Arial, sans-serif;
         font-weight: 700;
-        color: $c_black;
+        color: $c_black--panter;
         font-size: 18px;
         line-height: 22px;
     }
