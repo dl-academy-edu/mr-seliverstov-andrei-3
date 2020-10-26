@@ -144,3 +144,48 @@ h2 {
   }
 } 
 
+.is-invalid {
+  border-color: $c_red--pomegranate;
+
+  &:hover,
+  &:focus {
+    border-color: $c_red--pomegranate;
+    cursor: pointer;
+  }
+}
+
+.invalid-feedback {
+  color: $c_red--pomegranate;
+  display: flex;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  margin-top: -16px;
+  margin-bottom: 5px;
+}
+
+.is-normal {
+  border-color: $c_green--malachite;
+
+  &:hover,
+  &:focus {
+    border-color: $c_green--malachite;
+    cursor: pointer;
+  }
+}
+
+.normal-feedback {
+  color: $c_green--malachite;
+  display: flex;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  margin-top: -16px;
+  margin-bottom: 5px;
+}
+
+

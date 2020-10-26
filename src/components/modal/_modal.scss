@@ -47,6 +47,7 @@
     }
 
     &__label {  
+        position: relative;
 
         :hover {
             border-color: $c_grey--text;
@@ -106,6 +107,7 @@
         line-height: 16px;
         color: #1E0606; 
         align-items: center;
+        display: block;
 
         &__input:focus ~ .clicking-button {
             outline: auto;
