@@ -20,16 +20,14 @@
         background-color: transparent;
         border: none;
 
-        &:disabled {
+        &:disabled {            
             opacity: .2;
         }
 
-        &:hover {
-            opacity: .5;
-
-        }
+        &:hover,
         &:focus {
             opacity: .5;
+            cursor: pointer;
         }
     }
 }
@@ -77,12 +75,10 @@
                 background-color: $c_black--panter;
             }
 
-            &:hover {
-                background-color: $c_grey--text;
-            }
-            
+            &:hover,
             &:focus {
                 background-color: $c_grey--text;
+                cursor: pointer;
             }
         }
     }

@@ -28,6 +28,15 @@
         background-color: $c_black--panter;
         color: $c_white;
         border-radius: 30px;
+        transition: color $tr_duration $tr_easing;
+
+        &:hover,
+        &:focus {
+            color: $c_black--panter;
+            cursor: pointer;
+            background-color: $c_white;
+            font-weight: 700;
+        }        
     }
 
     &__list {
@@ -38,20 +47,33 @@
         margin: 40px 0;
     }
 
-    &__item {
-        border-radius: 30px;
-        border: 2 solid $c_black--panter;        
-        padding: 10px 19px;
+    &__item {      
+        padding: 10px 0;
         margin: 5px;
-    }
-
-    &__contacts {
         font-family: "Gilroy", Arial, sans-serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
-        line-height: 22px;        
-        color: $c_black--panter;
+        line-height: 22px;         
+        border: 2 solid $c_black--panter;  
+        border-radius: 30px;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            background-color: $c_black--panter;
+            font-weight: 700;
+        }
+    }
+
+    &__contacts {
+        color: $c_black--panter;  
+        padding: 10px 19px;
+        
+        &:hover,
+        &:focus {
+            color: $c_white;
+        }
     }
 
     &__bottom-text {
@@ -67,6 +89,13 @@
 
     &__bottom-link {
         color: $c_grey--text;
-        border-bottom: 1px dashed $c_grey--text;        
+        border-bottom: 1px dashed $c_grey--text;      
+        
+        &:hover,
+        &:focus {
+            color: $c_black--panter;
+            border-bottom: 1px solid $c_black--panter;  
+            cursor: pointer;
+        }
     }
 }
