@@ -19,6 +19,7 @@
     &__vector {
         background-color: transparent;
         border: none;
+        transition: opacity $tr_duration $tr_easing;
 
         &:disabled {            
             opacity: .2;
@@ -70,6 +71,7 @@
             border-radius: 50%;
             border: none;
             background-color: $c_grey--mercury;
+            transition: $tr_duration $tr_easing;
 
             &-active {
                 background-color: $c_black--panter;

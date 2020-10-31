@@ -81,7 +81,8 @@
         border: 2.5px solid $c_grey--mercury;
         height: 50px;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 20px;                       
+        transition:  $tr_duration $tr_easing;
     }
 
     &__textarea {
@@ -176,7 +177,15 @@
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;
-        text-align: center;
+        text-align: center; 
+        transition: $tr_duration $tr_easing;
+
+        &:hover,
+        &:focus {
+            background-color: $c_black--panter;
+            cursor: pointer;
+            color: $c_white;
+        }
 
         &-close {
             position: absolute;

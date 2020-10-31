@@ -74,7 +74,8 @@
         border: 2.5px solid $c_grey--mercury;
         height: 50px;
         width: 100%;
-        margin-bottom: 20px;        
+        margin-bottom: 20px;    
+        transition:$tr_duration $tr_easing;    
     }
 
     &__textarea {
@@ -93,69 +94,6 @@
         margin-bottom: 20px;
     }
 
-    &__consent {
-        margin: 20px 0 21px;
-        font-family: "Gilroy", Arial, sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        color: #1E0606; 
-        align-items: center;
-
-        &__input:focus ~ .clicking-button {
-            outline: auto;
-        }
-    }
-
-    input:checked ~ .modal__clicking-button::after{
-        opacity: 1;
-    }
-
-    &__clicking-button {
-        padding-left: 33px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        height: 17px;
-
-        &::before{
-            position: absolute;
-            content: '';
-            top: -1px;
-            left: 0;
-            width: 19px;
-            height: 19px;
-            border: 2px solid black;
-            box-sizing: border-box;
-            border-radius: 3px;
-
-            @include media_interval(0, $media_mobile) {
-            width: 17px;
-            height: 17px;
-            top: -10px;
-            }
-        }
-        
-        &::after{
-            position: absolute;
-            content: '';
-            top: 2px;
-            left: 5px;
-            width: 12px;
-            height: 7px;
-            border-left: 2px solid;
-            border-bottom: 2px solid;
-            transform: rotate(-55deg);
-            color: black;
-            opacity: 0;
-            transition: opacity 0.3s;
-
-            @include media_interval(0, $media_mobile) {
-            top: -9px;
-            left: 4px;
-            }
-        }
-    }   
-
     &__button {
         padding: 8px 19px;
         background-color: transparent;
@@ -169,6 +107,14 @@
         font-weight: 700;
         line-height: 22px;
         text-align: center;
+        transition: $tr_duration $tr_easing;
+
+        &:hover,
+        &:focus {
+            background-color: $c_black--panter;
+            cursor: pointer;
+            color: $c_white;
+        }
 
         &-close {
             position: absolute;

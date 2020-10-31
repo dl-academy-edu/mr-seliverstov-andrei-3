@@ -192,7 +192,7 @@ function getFormData(form, data={}) {
         event.preventDefault();
         const data = getFormData(event.target);
         const errors = validateData(data);
-        if(Object.keys(errors).length) {
+        if(Object.keys(errors).length + 1) {
             setFormError(form, errors);
         }
         console.log(errors);
@@ -220,7 +220,7 @@ function getFormData(form, data={}) {
         event.preventDefault();
         const data = getFormData(event.target);
         const errors = validateData(data);
-        if(Object.keys(errors).length) {
+        if(Object.keys(errors).length + 1) {
             setFormError(form, errors);
         }
         console.log(errors);

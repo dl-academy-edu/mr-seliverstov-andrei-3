@@ -1,0 +1,31 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.search {
+    
+    &__form {
+        display: flex;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $c_grey--mercury;
+        margin-bottom: 20px;
+        min-height: 30px;
+    }
+
+    &__input {
+        width: 100%;
+        margin-right: 30px;
+        border: 2.5px solid $c_grey--mercury;
+        box-sizing: border-box;               
+        transition:  $tr_duration $tr_easing;
+
+        &:hover {
+            border-color: $c_grey--text;
+            cursor: pointer;
+        }
+
+        &:active {
+            border-color: $c_black--panter;
+        }
+    }
+}

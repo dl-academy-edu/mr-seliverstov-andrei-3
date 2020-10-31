@@ -2,7 +2,12 @@
     <div class="blog__wrapper">
         <ul class="blog__list">
             <li class="blog__item">
-                <picture></picture>
+                <picture>
+                    <source srcset="/static/images/dog.jpg, /static/images/dog-2.jpg 2x" media="(min-width: 1024px)">
+                    <source srcset="/static/images/dog-tablet.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/static/images/dog-mobile.jpg" media="(max-width: 767px)">
+                    <img class="blog__picture" srcset="/static/images/dog.jpg" alt="dog-picture">
+                </picture>
                 <div class="blog__block">
                     <div class="blog__tags">
                         <span class="blog__tags-orange"></span>
@@ -18,7 +23,7 @@
                         <p class="blog__text-info">
                             Duis sit odio dui pretium suspendisse malesuada sit leo in. Massa nec eget etiam tellus ac. Sodales nibh pellentesque donec eu ultrices tortor condimentum massa.
                         </p>
-                        <a href="#" class="blog__link">Go to this post</a>
+                        <a href="#" class="blog__text-link">Go to this post</a>
                     </div>
                 </div>
             </li>
@@ -39,7 +44,7 @@
                         <p class="blog__text-info">
                             Erat nunc parturient feugiat egestas adipiscing erat eu. Non neque mi volutpat et lectus.
                         </p>
-                        <a href="#" class="blog__link">Go to this post</a>
+                        <a href="#" class="blog__text-link">Go to this post</a>
                     </div>
                 </div>
             </li>
@@ -59,7 +64,7 @@
                         <p class="blog__text-info">
                             At leo at nisl tortor egestas. Mauris luctus est luctus massa tellus erat gravida. Eget aenean eget diam habitant risus. Dapibus et, nec platea felis. Facilisi ut leo arcu, semper id pellentesque quisque ultrices etiam.
                         </p>
-                        <a href="#" class="blog__link">Go to this post</a>
+                        <a href="#" class="blog__text-link">Go to this post</a>
                     </div>
                 </div>
             </li>
@@ -81,7 +86,7 @@
                         <p class="blog__text-info">
                             Nulla tempus mauris sed vel bibendum. Felis urna suspendisse amet, laoreet sagittis. Semper pellentesque condimentum vitae morbi in dui. Et in et diam massa.
                         </p>
-                        <a href="#" class="blog__link">Go to this post</a>
+                        <a href="#" class="blog__text-link">Go to this post</a>
                     </div>
                 </div>
             </li>
@@ -102,40 +107,10 @@
                         <p class="blog__text-info">
                             Eu, libero aliquet nibh turpis quis nulla et ullamcorper purus. Consequat egestas sed sagittis morbi lacus. Consectetur et justo, sagittis vitae mi faucibus urna, eu. 
                         </p>
-                        <a href="#" class="blog__link">Go to this post</a>
+                        <a href="#" class="blog__text-link">Go to this post</a>
                     </div>
                 </div>
             </li>
         </ul>
-        <section class="blog__pagination">
-            <button class="backward-button blog__pagination-vector"></button>
-            <ul class="blog__pagination-list">
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">1</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">2</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">3</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">4</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">5</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">6</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">7</button>
-                </li>
-                <li class="blog__pagination-item">
-                    <button class="blog__pagination-button">8</button>
-                </li>
-            </ul>
-            <button class="forward-button blog__pagination-vector"></button>
-        </section>
     </div>
 </section>

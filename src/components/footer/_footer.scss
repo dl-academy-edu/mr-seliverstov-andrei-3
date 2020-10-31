@@ -28,7 +28,7 @@
         background-color: $c_black--panter;
         color: $c_white;
         border-radius: 30px;
-        transition: color $tr_duration $tr_easing;
+        transition: $tr_duration $tr_easing;
 
         &:hover,
         &:focus {
@@ -69,6 +69,7 @@
     &__contacts {
         color: $c_black--panter;  
         padding: 10px 19px;
+        transition: $tr_duration $tr_easing;
         
         &:hover,
         &:focus {
@@ -89,7 +90,8 @@
 
     &__bottom-link {
         color: $c_grey--text;
-        border-bottom: 1px dashed $c_grey--text;      
+        border-bottom: 1px dashed $c_grey--text;    
+        transition: $tr_duration $tr_easing;  
         
         &:hover,
         &:focus {

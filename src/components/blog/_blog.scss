@@ -1,0 +1,59 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.blog {
+    &__item {
+        display: flex;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $c_grey--mercury;
+        margin-bottom: 20px;
+    }
+
+    &__picture {
+        max-width: 320px;
+    }
+
+    &__block {
+        padding: 20px;
+    }
+
+    &__information {
+        margin: 10px 0 15px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        color: $c_grey--text;
+
+        & > span {
+            margin-right: 10px;
+        }
+    }
+
+    &__text {
+
+        &-info {
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        margin: 10px 0 20px;
+        }
+
+        &-link {
+            font-family: "Gilroy", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            color: $c_black--panter;
+            border-bottom: 1px dashed $c_black--panter;
+
+            &:hover,
+            &:active {
+                border-bottom: 1px solid $c_black--panter;
+            }
+        }
+    }
+}
