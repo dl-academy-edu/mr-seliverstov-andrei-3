@@ -1,9 +1,12 @@
 .filter {
     &__block {
-        margin: 40px 0 35px;
+        margin: 40px 0 20px;
 
         &-form {
-            display: flex;
+
+            &-wrapper {                
+                display: flex;
+            }
         }
 
         &-name {
@@ -32,10 +35,63 @@
                 margin: -2.5px;
             }
 
-            &-checkbox {
+            &-text {  
+                display: block;              
+                position: relative;
+                padding: 3px 8px;
+                margin: 2.5px;
+                color: transparent;
                 width: 25px;
                 height: 25px;
-                margin: 2.5px;
+                box-sizing: border-box;
+                border-radius: 5px;               
+                transition:  $tr_duration $tr_easing;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    top: 1px;
+                    left: 1px;
+                    width: 16px;
+			        height: 16px;
+                    background-image: url(/static/images/check.svg);
+                    background-repeat: no-repeat;
+                    box-sizing: border-box;
+                    opacity: 0;               
+                    transition:  $tr_duration $tr_easing;
+                }  
+
+                &-blue {
+                    border: 2.5px solid #2176FF;                  
+                }
+
+                &-cian {
+                    border: 2.5px solid #33A1FD;
+                }
+
+                &-yellow {
+                    border: 2.5px solid #FDCA40;
+                }
+
+                &-light-blue {
+                    border: 2.5px solid #57E2E5;
+                }
+
+                &-orange {
+                    border: 2.5px solid #F79824;
+                }
+
+                &-pink {
+                    border: 2.5px solid #E08DAC;
+                }
+
+                &-purple {
+                    border: 2.5px solid #6A7FDB;
+                }
+
+                &-green {
+                    border: 2.5px solid #45CB85;
+                }
             }
         }
 
@@ -271,14 +327,43 @@ input:checked ~ .filter__block-comments-text::before {
     border-color: $c_black--panter;
 }
 
-.filter__block-views-input:focus ~ .filter__block-views-text,
-.filter__block-shows-input:focus ~ .filter__block-shows-text,
-.filter__block-sort-input:focus ~ .filter__block-sort-text,
+.filter__block-views-input:focus    ~ .filter__block-views-text,
+.filter__block-shows-input:focus    ~ .filter__block-shows-text,
+.filter__block-sort-input:focus     ~ .filter__block-sort-text,
 .filter__block-comments-input:focus ~ .filter__block-comments-text {
     outline: auto;
 }
 
-input:checked ~ .filter__block-comments-text::after {
+input:checked ~ .filter__block-comments-text::after,
+input:checked ~ .filter__block-tags-text::after {
     opacity: 1;
 }
 
+.search {    
+    display: flex;
+    margin-top: 35px;
+    border-bottom: 2px solid $c_grey--mercury;    
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    
+    &__form {
+        min-height: 30px;
+    }
+
+    &__input {
+        width: 100%;
+        margin-right: 30px;
+        border: 2.5px solid $c_grey--mercury;
+        box-sizing: border-box;               
+        transition:  $tr_duration $tr_easing;
+
+        &:hover {
+            border-color: $c_grey--text;
+            cursor: pointer;
+        }
+
+        &:active {
+            border-color: $c_black--panter;
+        }
+    }
+}
