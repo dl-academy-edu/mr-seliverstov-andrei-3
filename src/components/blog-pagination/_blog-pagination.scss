@@ -1,0 +1,53 @@
+@import "../colors";
+@import "../vars";
+@import "../mixins";
+
+.blog__pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 60px;
+
+    &-list {
+        display: flex;        
+        align-items: center;
+    }
+
+    &-button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 5px;
+        font-family: "Gilroy", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: $c_grey--mercury;
+        transition: color $tr_duration $tr_easing;
+
+        &:hover,
+        &:focus {
+            color: $c_grey--text;
+            cursor: pointer;
+        }
+
+        &-active {
+            color: $c_black--panter;
+        }
+    }
+
+    &-vector {
+        background-color: transparent;
+        border: none;
+        transition: opacity $tr_duration $tr_easing;
+
+        &:disabled {            
+            opacity: .2;
+        }
+
+        &:hover,
+        &:focus {
+            opacity: .5;
+            cursor: pointer;
+        }
+    }
+}

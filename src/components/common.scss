@@ -11,6 +11,9 @@
 @import "./mobile-menu/mobile-menu";
 @import "./button-scroll/button-scroll";
 @import "./profile-editing/profile-editing";
+@import "./filter/filter";
+@import "./blog/blog";
+@import "./blog-pagination/blog-pagination";
 
 body { 
   font-family: "Gilroy", Arial, sans-serif;
@@ -46,7 +49,7 @@ p {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1480px;
   padding: 0 220px;
   margin: 0 auto;
 
@@ -82,7 +85,7 @@ h1 {
   font-weight: bold;
   font-size: 47px;
   line-height: 56px;
-  color: $c_black;
+  color: $c_black--panter;
   margin-top: 40px;
 
   @include media_interval($media_mobile, $media_tablet) {
@@ -104,8 +107,18 @@ h2 {
   font-weight: bold;
   font-size: 34px;
   line-height: 42px;
-  color: $c_black;
+  color: $c_black--panter;
   margin-top: 60px;
+}
+
+h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: left;
+  color: $c_black--panter;
 }
 
 .button {
