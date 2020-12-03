@@ -4,6 +4,10 @@
 
 .header {      
 
+    @include media_interval(0, $media_mobile) {
+        display: none;
+    }
+
     &__navigation {
         display: flex;
         justify-content: space-between;

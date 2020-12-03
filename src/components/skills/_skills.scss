@@ -19,10 +19,24 @@
     &__list {
         display: flex;
         justify-content: space-between;
+
+        @include media_interval(0, $media_tablet) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
         text-align: center;
+
+        @include media_interval($media_mobile, $media_tablet) {
+            max-width: 147px;
+            margin-bottom: 44px;
+        }
+
+        @include media_interval(0, $media_mobile) {
+            max-width: 130px;
+            margin-bottom: 44px;
+        }
 
         &-programm {
             font-family: "Gilroy", Arial, sans-serif;
@@ -38,6 +52,10 @@
             display: flex;
             align-items: center;
             margin: 0 12px;
+
+            @include media_interval(0, $media_tablet) {
+                margin: 0 10px;
+            }
             
             &-number {
                 font-family: "Gilroy", Arial, sans-serif;
@@ -47,12 +65,24 @@
                 text-align: left;
                 color: $c_grey--text;
                 margin-right: 12px;
+
+                @include media_interval(0, $media_tablet) {
+                    margin-right: 10px;
+                }
             }
 
             &-bar {
                 max-width: 142px;
                 height: 9px;
                 background-color: transparent;
+
+                @include media_interval($media_mobile, $media_tablet) {
+                    max-width: 111px;
+                }
+
+                @include media_interval(0, $media_mobile) {
+                    max-width: 94px;
+                }
 
                 &::-webkit-progress-bar {
                     border: none;            

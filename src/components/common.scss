@@ -53,12 +53,15 @@ p {
   padding: 0 220px;
   margin: 0 auto;
 
-  @include media_interval(0, $media_tablet) {
+  @include media_interval($media_mobile, $media_tablet) {
+    max-width: 768px;
     padding: 0 60px;
   }
 
   @include media_interval(0, $media_mobile) {
+    max-width: 320px;
     padding: 0 20px;
+    overflow: hidden;
   }
 }
 
@@ -87,17 +90,11 @@ h1 {
   line-height: 56px;
   color: $c_black--panter;
   margin-top: 40px;
-
-  @include media_interval($media_mobile, $media_tablet) {
-    font-size: 36px;
-    line-height: 44px;
-    margin-bottom: 10px;
-  }
+  letter-spacing: -0.5px;
 
   @include media_interval(0, $media_mobile) {
-    font-size: 24px;
-    line-height: 29px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    max-width: 150px;
   }
 }
 
@@ -109,6 +106,10 @@ h2 {
   line-height: 42px;
   color: $c_black--panter;
   margin-top: 60px;
+
+  @include media_interval(0, $media_mobile) {
+    margin-top: 40px;
+  }
 }
 
 h3 {
@@ -200,5 +201,28 @@ h3 {
   margin-top: -16px;
   margin-bottom: 5px;
 }
+
+.burger {
+  width: 32px;
+  height: 20px;
+  background-color: transparent;
+
+  &__button-open-menu {
+    display: none;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+    width: 32px;
+    height: 20px;
+    margin-top: 50px;
+    margin-right: 20px;
+    
+    @include media_interval(0, $media_mobile) {
+        display: block;
+    }
+  }
+}
+
+
 
 

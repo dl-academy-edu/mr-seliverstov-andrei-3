@@ -12,6 +12,10 @@
     text-align: right;
     display: none;
 
+    &__open{
+        display: block;
+    }    
+
     &__button-close {
         width: 26px;
         height: 26px;

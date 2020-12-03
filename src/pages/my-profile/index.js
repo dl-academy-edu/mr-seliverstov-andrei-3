@@ -1,3 +1,18 @@
+
+//Mobile menu
+
+var buttonOpenMenu = document.querySelector(".js_button-open-menu"),
+    buttonCloseMenu = document.querySelector(".js_button-close-menu"),
+    mobile = document.querySelector(".mobile-menu__js");
+
+buttonOpenMenu.addEventListener("click", function() {
+    mobile.classList.add("mobile__open")
+});
+
+buttonCloseMenu.addEventListener("click", function() {
+    mobile.classList.remove("mobile__open")
+});
+
 // Editing password
 
 (function() {

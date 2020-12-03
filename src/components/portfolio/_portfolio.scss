@@ -11,8 +11,22 @@
     flex-direction: column;
     text-align: center;
 
+    @include media_interval($media_mobile, $media_tablet) {
+        margin-top: 20px;
+        padding: 0.5px 60px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+        margin-top: 0;
+        padding: 0.5px 20px;
+    }
+
     &__slider {
         margin: 50px 0 60px;
+
+        @include media_interval(0, $media_mobile) {
+            margin: 30px 0 40px;
+        }
     }    
 
     &__picture {
@@ -22,10 +36,21 @@
 }
 
 .swiper{
+
     &-container {
         max-width: 1000px;
         min-height: 604px;  
         z-index: 0;
+
+        @include media_interval($media_mobile, $media_tablet) {
+            max-width: 648px;
+            min-height: 604px;
+        }
+        
+        @include media_interval(0, $media_mobile) {
+            max-width: 280px;
+            min-height: 604px;
+        }
     } 
 
     &-button-prev {
@@ -55,6 +80,10 @@
         flex-direction: column;
         z-index: 1;
 
+        @include media_interval(0, $media_tablet) {
+            padding: 20px 0;
+        }
+
         &-link {
             font-family: "Gilroy", Arial, sans-serif;
             font-size: 18px;
@@ -63,6 +92,10 @@
             color: $c_white;
             margin-bottom: 16px;
             border-bottom: 1px dashed $c_white;
+
+            @include media_interval(0, $media_mobile) {
+                max-width: 159px;
+            }
 
             &:hover,
             &:focus {
@@ -78,6 +111,10 @@
             line-height: 16px;
             color: $c_white;
             max-width: 400px;
+
+            @include media_interval(0, $media_mobile) {
+                max-width: 250px;
+            }
         }
     }
 }

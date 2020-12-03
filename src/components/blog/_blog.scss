@@ -8,6 +8,10 @@
         padding-bottom: 20px;
         border-bottom: 2px solid $c_grey--mercury;
         margin-bottom: 20px;
+
+        @include media_interval(0, $media_mobile) {
+            display: block;
+        }
     }
 
     &__picture {
@@ -16,6 +20,10 @@
 
     &__block {
         padding: 20px;
+
+        @include media_interval(0, $media_mobile) {
+            padding: 0;
+        }
     }
 
     &__information {

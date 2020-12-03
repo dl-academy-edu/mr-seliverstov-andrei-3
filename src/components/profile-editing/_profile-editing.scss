@@ -22,22 +22,42 @@
         border: 2px solid $c_black;
         justify-content: space-between;
 
+        @include media_interval(0, $media_mobile) {
+            padding: 120px 20px;
+        }
+
         &-password {            
             max-width: 370px;
             width: 100%;
             min-height: 407px;
+
+            @include media_interval(0, $media_mobile) {
+                max-width: 320px;
+                min-height: 567px;
+            }
         }
 
         &-data {
             max-width: 680px;
             width: 100%;
             min-height: 504px;
+
+            @include media_interval(0, $media_mobile) {
+                max-width: 100%;
+                height: 100%;
+                overflow: auto;
+            }
         }
     }
 
     &__cell-50 {
         display: flex;
         margin: 0 -10px;
+
+        @include media_interval(0, $media_mobile) {
+            display: block;
+            margin: -13px 0;
+        }
     }
 
     &__label {
@@ -75,7 +95,7 @@
         height: 50px;
         width: 100%;
         margin-bottom: 20px;    
-        transition:$tr_duration $tr_easing;    
+        transition:$tr_duration $tr_easing;  
     }
 
     &__textarea {
@@ -109,6 +129,10 @@
         text-align: center;
         transition: $tr_duration $tr_easing;
 
+        @include media_interval(0, $media_mobile) {
+            margin-top: 30px;
+        }
+
         &:hover,
         &:focus {
             background-color: $c_black--panter;
@@ -123,6 +147,11 @@
             border: none;
             background-color: transparent;
             padding: 0;
+
+            @include media_interval(0, $media_mobile) {
+                left: 23px;
+                top: 75px;
+            }
         }
     }
 }
