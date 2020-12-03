@@ -6,6 +6,10 @@
     &__block {
         margin: 40px 0 93px;
         display: flex;
+
+        @include media_interval(0, $media_mobile) {
+            display: block;
+        }
     }
 
     &__data {
@@ -43,4 +47,13 @@
     min-width: 320px;
     min-height: 450px;
     margin: -15px 105px 0 -15px;
+
+    @include media_interval($media_mobile, $media_tablet) {
+        margin: -15px 76px 0 -15px;
+    }
+
+    @include media_interval(0, $media_mobile) {
+        min-width: 280px;
+        margin: -15px 0 25px -15px;
+    }
 }

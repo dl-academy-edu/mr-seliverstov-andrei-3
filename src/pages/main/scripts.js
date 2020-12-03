@@ -1,3 +1,6 @@
+const SERVER_URL = "https://academy.directlinedev.com";
+const VERSION_API = "1.0.0";
+
 //Scroll
 
 (function(){
@@ -6,7 +9,7 @@
         return;
     }
 
-    function hiddenScroll(event) {
+    function hiddenScroll(e) {
         if(window.pageYOffset > 1500) {
             if(button.classList.contains("hidden")) {
                 button.classList.remove("hidden");
@@ -19,8 +22,8 @@
         }
     }    
     
-    function smoothScroll(event) {
-        if((window.pageYOffset > 1500) && (button.contains(event.target))) {
+    function smoothScroll(e) {
+        if((window.pageYOffset > 1500) && (button.contains(e.target))) {
             window.scrollTo({
                 top: 0,
                 behavior: "smooth",
@@ -64,7 +67,7 @@
     let register = document.querySelector(".register_js"),
         buttonOpen = document.querySelector(".button__register-open_js"),
         exitButton = document.querySelector(".exit__register-button_js"),
-        inputText = document.querySelector(".modal__input-register_js");
+        inputText = document.querySelector(".modal__input-register_js")
 
     buttonOpen.addEventListener("click", function() {
         register.classList.add("register_open");
@@ -81,8 +84,22 @@
             register.classList.remove("register_open")
             buttonOpen.focus();
         }
-    })
+    })    
 })();
+
+//Mobile menu
+
+var buttonOpenMenu = document.querySelector(".js_button-open-menu"),
+    buttonCloseMenu = document.querySelector(".js_button-close-menu"),
+    mobile = document.querySelector(".mobile-menu__js");
+
+buttonOpenMenu.addEventListener("click", function() {
+    mobile.classList.add("mobile__open")
+});
+
+buttonCloseMenu.addEventListener("click", function() {
+    mobile.classList.remove("mobile__open")
+});
 
 //Send message modal
 
@@ -108,6 +125,9 @@
             buttonOpen.focus();
         }
     })
+    // registerForm.addEventListener("submit", (e) => {
+    //     register(e);
+    // })
 })();
 
 // Avatar slider
@@ -372,9 +392,9 @@ function getFormData(form, data={}) {
     const form = document.forms["modal-register"];
     console.log("modal-form =", form);
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const data = getFormData(event.target);
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = getFormData(e.target);
         const errors = validateData(data);
         if(Object.keys(errors).length + 1) {
             setFormError(form, errors);
@@ -415,9 +435,9 @@ function getFormData(form, data={}) {
     const form = document.forms["modal-sign"];
     console.log("modal-form =", form);
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const data = getFormData(event.target);
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = getFormData(e.target);
         const errors = validateData(data);
         if(Object.keys(errors).length + 1) {
             setFormError(form, errors);
@@ -440,9 +460,9 @@ function getFormData(form, data={}) {
     const form = document.forms["modal-message"];
     console.log("modal-form =", form);
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const data = getFormData(event.target);
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = getFormData(e.target);
         const errors = validateData(data);
         if(Object.keys(errors).length + 1) {
             setFormError(form, errors);
@@ -469,4 +489,42 @@ function getFormData(form, data={}) {
         return errors;
     }
 })();
+
+
+function fetchData({method = "GET", url = '', headers = {}, body = null}) {
+    return fetch(SERVER_URL + url, {
+        method: method,
+        body: body,
+        headers: headers,        
+    })
+}
+
+function register(e) {
+    e.preventDefault();
+    const data = getFormData(e.target);
+    console.log(data);
+    fetch.data({
+        method: "POST",
+        url: "/api/users",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        },
+    })
+    .then(res => {
+        return res.json();
+    })
+    .then(res => {
+        if(res.success) {
+            alert("Пользователь успешно создан \n" + JSON.stringify(res.data, null, 2));
+        }
+        else {
+            throw res;
+        }
+    })
+    .catch(err => {
+        setFormError(e.target, err.errors);
+        console.error(err);
+    })
+}
 
